@@ -32,9 +32,8 @@ class SearchViewController: UIViewController, UICollectionViewDataSource, UIColl
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        // dequeue a cell object and cast it to CustomCollectionViewCell before setting its properties. In order to dequeue the cell, you'll need to set a cell reuse identifier for your collectionview cell in Main.storyboard
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CustomCollectionViewCell", for: indexPath) as! CustomCollectionViewCell
-        cell.ImageView.image = UIImage(named: PokemonGenerator.categoryDict[indexPath.row]!)
+        cell.pokemonImage.image = UIImage(named: PokemonGenerator.categoryDict[indexPath.row]!)
         return cell
     }
     

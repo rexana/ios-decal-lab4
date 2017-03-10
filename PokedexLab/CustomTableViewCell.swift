@@ -10,6 +10,12 @@ import UIKit
 
 class CustomTableViewCell: UITableViewCell {
 
+
+    @IBOutlet weak var pokemonImage: UIImageView!
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var numberLabel: UILabel!
+    @IBOutlet weak var statsLabel: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

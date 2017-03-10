@@ -52,7 +52,7 @@
                                             <constraint firstAttribute="trailing" secondItem="hvc-89-4gD" secondAttribute="trailing" id="SYS-uJ-UYF"/>
                                         </constraints>
                                         <connections>
-                                            <outlet property="ImageView" destination="hvc-89-4gD" id="S5K-bb-5O7"/>
+                                            <outlet property="pokemonImage" destination="hvc-89-4gD" id="aMf-JZ-OMh"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -96,10 +96,10 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="100"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="wLw-iR-1Pj" id="6si-Yy-acw">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="99"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="99.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="R5K-fA-DIS">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="R5K-fA-DIS">
                                                     <rect key="frame" x="8" y="8" width="83" height="83"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" secondItem="R5K-fA-DIS" secondAttribute="height" multiplier="1:1" id="x7x-Qy-9f6"/>
@@ -146,6 +146,12 @@
                                                 <constraint firstAttribute="trailingMargin" secondItem="Gp3-OX-RdZ" secondAttribute="trailing" id="uPn-RI-W2i"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="nameLabel" destination="IFe-OV-SlT" id="NRW-3S-H5o"/>
+                                            <outlet property="numberLabel" destination="w1Y-Vc-VHm" id="TuI-7c-K0l"/>
+                                            <outlet property="pokemonImage" destination="R5K-fA-DIS" id="D13-Os-kNu"/>
+                                            <outlet property="statsLabel" destination="Gp3-OX-RdZ" id="jwK-bh-Ae2"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -159,6 +165,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="tableView" destination="d6h-CD-1oQ" id="NEx-Wn-Snw"/>
                         <segue destination="YzK-rK-0EI" kind="show" identifier="CategoryToInfo" id="rCC-XG-WSj"/>
                     </connections>
                 </viewController>
@@ -179,13 +186,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="59q-Qs-hZF">
-                                <rect key="frame" x="16" y="28" width="343" height="343"/>
+                                <rect key="frame" x="16" y="72" width="343" height="343"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="59q-Qs-hZF" secondAttribute="height" multiplier="1:1" id="r4T-D0-nby"/>
                                 </constraints>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="faL-NR-CcT">
-                                <rect key="frame" x="16" y="379" width="343" height="280"/>
+                                <rect key="frame" x="16" y="423" width="343" height="236"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pokemon" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CWM-Hh-1BN">
                                         <rect key="frame" x="97" y="8" width="148" height="29"/>
@@ -245,7 +252,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fch-sh-ycV">
-                                        <rect key="frame" x="113" y="251" width="117" height="21"/>
+                                        <rect key="frame" x="113" y="207" width="117" height="21"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="117" id="oqM-Wt-28h"/>
                                         </constraints>
